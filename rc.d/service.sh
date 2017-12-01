@@ -12,7 +12,7 @@ SRVNAME="sshd"
 # 2. Выбираем полную информацию о запущенном процессе, заносим её в переменную.
 
 SRVPID=`ps aux | grep ${SRVNAME} | grep -v grep | awk {'print $2'}`
-SRVSTATUS=`ps aux | grep java | grep ${SRVNAME} | grep -v grep`
+SRVSTATUS=`ps aux | grep ${SRVNAME} | grep -v grep`
 
 # ОБРАБОТЧИК СЦЕНАРИЯ START.
 start() {
